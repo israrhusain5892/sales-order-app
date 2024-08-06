@@ -8,6 +8,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  
   useDisclosure,
   Stack, useColorMode, useColorModeValue, Center
 } from '@chakra-ui/react';
@@ -37,8 +38,8 @@ function Dashboard(props) {
   return (
     <div>
       <NavBar />
-      <Box md:w="100%" display={{ base: 'flex-wrap', md: 'flex', }} m="auto" sm:px="20px" md:mx="auto" mt="20px" px={['10px', '30px', '60px']}>
-        <HStack spacing="24px" display={{ base: 'flex', md: 'flex-wrap', }} fontSize={['sm', 'md', 'lg', 'xl']}   >
+      <Box md:w="100%" display={{ base: 'flex-wrap', md: 'flex' }} m="auto" sm:px="20px" md:mx="auto" mt="20px" px={['10px', '30px', '60px']}>
+        <HStack spacing="20px"  display={{ base: 'flex', md: 'flex-wrap', }}    fontSize={['sm', 'md', 'lg', 'xl']}   >
           <Button
             onClick={(e) =>
               Login  ? navigate("/activesale") : navigate("/loginForm")
@@ -60,7 +61,7 @@ function Dashboard(props) {
             Login ? onOpen : (e) => navigate("/LoginForm")
           }
 
-          colorScheme='teal' size={['sm', 'md',]} ml={['90px', '700px']} mt={['20px', '0px']}>
+          colorScheme='teal' size={['sm', 'md',]} ml={['40px', '700px']} mt={['20px', '0px']}>
           + Sale Order
         </Button>
       </Box>
